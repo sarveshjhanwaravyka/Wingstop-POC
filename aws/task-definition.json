@@ -1,0 +1,27 @@
+{
+  "family": "wingstop-poc",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "1024",
+  "memory": "2048",
+  "executionRoleArn": "<+pipeline.variables.executionRoleArn>",
+  "taskRoleArn": "<+pipeline.variables.taskRoleArn>",
+  "containerDefinitions": [
+    {
+      "name": "wingstop-poc",
+      "image": "<+artifact.image>",
+      "cpu": 1024,
+      "memory": 2048,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 8080,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  ]
+}
