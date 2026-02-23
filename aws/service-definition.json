@@ -1,4 +1,5 @@
 {
+  "serviceName": "wingstop-poc-service",
   "launchType": "FARGATE",
   "desiredCount": 1,
   "networkConfiguration": {
