@@ -11,7 +11,7 @@
   "containerDefinitions": [
     {
       "name": "wingstop-poc",
-      "image": "<+pipeline.stages.Install_Dependencies.spec.execution.steps.push_ecr.artifact_push_ecr.stepArtifacts.publishedImageArtifacts[0].url>",
+      "image": "<+execution.steps.push_ecr.artifact_push_ecr.stepArtifacts.publishedImageArtifacts[0].url>",
       "cpu": 1024,
       "memory": 2048,
       "essential": true,
