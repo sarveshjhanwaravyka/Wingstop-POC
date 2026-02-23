@@ -1,0 +1,15 @@
+{
+  "launchType": "FARGATE",
+  "desiredCount": 1,
+  "networkConfiguration": {
+    "awsvpcConfiguration": {
+      "subnets": [
+        "<+pipeline.variables.subnetId>"
+      ],
+      "securityGroups": [
+        "<+pipeline.variables.securityGroupId>"
+      ],
+      "assignPublicIp": "ENABLED"
+    }
+  }
+}
